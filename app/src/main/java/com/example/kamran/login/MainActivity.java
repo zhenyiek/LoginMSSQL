@@ -6,10 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.Toast;
+import android.widget.*;
+
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -27,7 +25,6 @@ public class MainActivity extends AppCompatActivity
 
     // Declaring connection variables
     Connection con;
-    String un,pass,db,ip;
     //End Declaring connection variables
 
     @Override
@@ -44,13 +41,6 @@ public class MainActivity extends AppCompatActivity
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
         // End Getting values from button, texts and progress bar
-
-        // Declaring Server ip, username, database name and password
-        ip = "192.168.0.199";
-        db = "DB_Android";
-        un = "lhk";
-        pass = "123465";
-        // Declaring Server ip, username, database name and password
 
 
         // Setting up the function when button login is clicked

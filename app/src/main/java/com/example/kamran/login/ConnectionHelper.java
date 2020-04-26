@@ -14,7 +14,7 @@ import java.sql.SQLException;
 
 public class ConnectionHelper {
 
-    String ip,db,DBUserNameStr,DBPasswordStr;
+    String ip,db,DBUserName,DBPassword;
 
 
     @SuppressLint("NewApi")
@@ -22,10 +22,10 @@ public class ConnectionHelper {
     {
 
         // Declaring Server ip, username, database name and password
-        ip = "192.168.0.199";
+        ip = "192.168.0.158";
         db = "DB_Android";
-        DBUserNameStr = "lhk";
-        DBPasswordStr = "123456";
+        DBUserName = "lhk";
+        DBPassword = "123456";
         // Declaring Server ip, username, database name and password
 
 
@@ -36,7 +36,7 @@ public class ConnectionHelper {
         try
         {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-            ConnectionURL = "jdbc:jtds:sqlserver://" + ip +";databaseName="+ db + ";user=" + DBUserNameStr+ ";password=" + DBPasswordStr + ";";
+            ConnectionURL = "jdbc:jtds:sqlserver://" + ip +";databaseName="+ db + ";user=" + DBUserName+ ";password=" + DBPassword + ";";
             connection = DriverManager.getConnection(ConnectionURL);
         }
         catch (SQLException se)
